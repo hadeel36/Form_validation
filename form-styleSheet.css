@@ -1,0 +1,92 @@
+.main-page {
+	margin: 5%;
+}
+
+.main-page__header {
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 7%;
+	color: red;
+}
+
+.main-page__form-header {
+	padding-left: 5%;
+	padding-bottom: 3%;
+}
+
+fieldset {
+	border: none;
+	padding-bottom: 3%;
+}
+
+.main-page__lable {
+	display: inline-block;
+	padding-left: 5%;
+	padding-right: 3%;
+	font-weight: bolder;
+	font-size: 21px;
+	text-transform: capitalize;
+	white-space: nowrap;
+	width: 15%;
+}
+
+.main-page__input {
+	width: 50%;
+	padding: 11px 0 11px 7px;
+	font-size: 17px;
+	border-radius: 5px;
+	border-color: gray;
+}
+
+.main-page__check-box {
+	margin-left: 5%;
+	margin-right: 3%;
+	transform: scale(1.5);
+}
+
+.main-page__check-box-lable {
+	font-size: 17px;
+}
+
+.main-page__btn-submit {
+	margin-left: 50%;
+	padding: 7px 30px 7px 30px;
+	border-radius: 4px;
+	font-size: 17px;
+}
+
+@media screen and (max-width: 750px) {
+	.main-page__lable {
+		padding-left: 0;
+		padding-right: 8%;
+		font-weight: normal;
+		font-size: 18px;
+	}
+
+	.main-page__input {
+		width: 64%;
+		padding: 7px 0 7px 3px;
+		font-size: 13px;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+    .main-page__lable {
+    	padding-left: 0;
+    	padding-right: 17%;
+    	font-weight: normal;
+    	font-size: 15px;
+    }
+
+    .main-page__input {
+    	width: 64%;
+    	padding: 3px 0 3px 2px;
+    	font-size: 11px;
+    }
+
+    .main-page__btn-submit {
+    	font-size: 13px;
+    }
+}
