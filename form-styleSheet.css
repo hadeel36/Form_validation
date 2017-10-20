@@ -1,21 +1,20 @@
 .main-page {
-	margin: 5%;
+	margin: 3%;
 }
 
 .main-page__header {
 	position: relative;
 	text-align: center;
 	text-transform: uppercase;
-	margin-bottom: 7%;
 	color: red;
 }
 
 .main-page__form-header {
 	padding-left: 5%;
-	padding-bottom: 3%;
 }
 
 fieldset {
+	position: relative;
 	border: none;
 	padding-bottom: 3%;
 }
@@ -25,7 +24,7 @@ fieldset {
 	padding-left: 5%;
 	padding-right: 3%;
 	font-weight: bolder;
-	font-size: 21px;
+	font-size: 19px;
 	text-transform: capitalize;
 	white-space: nowrap;
 	width: 15%;
@@ -33,10 +32,22 @@ fieldset {
 
 .main-page__input {
 	width: 50%;
-	padding: 11px 0 11px 7px;
-	font-size: 17px;
+	padding: 7px;
+	font-size: 13px;
 	border-radius: 5px;
 	border-color: gray;
+}
+
+#username_error,
+#firstName_error,
+#lastName_error,
+#email_error,
+#website_error,
+#password_error,
+#re_password_error,
+#accpetTrems_error {
+	font-size: 11px;
+	color: red;
 }
 
 .main-page__check-box {
@@ -50,7 +61,7 @@ fieldset {
 }
 
 .main-page__btn-submit {
-	margin-left: 50%;
+	margin-left: 6%;
 	padding: 7px 30px 7px 30px;
 	border-radius: 4px;
 	font-size: 17px;
@@ -71,7 +82,6 @@ fieldset {
 	}
 }
 
-
 @media screen and (max-width: 500px) {
     .main-page__lable {
     	padding-left: 0;
@@ -84,6 +94,18 @@ fieldset {
     	width: 64%;
     	padding: 3px 0 3px 2px;
     	font-size: 11px;
+    }
+
+    #username_error,
+    #firstName_error,
+    #lastName_error,
+    #email_error,
+    #website_error,
+    #password_error,
+    #re_password_error {
+    	position: absolute;
+    	top: 69%;
+    	left: 34%;
     }
 
     .main-page__btn-submit {

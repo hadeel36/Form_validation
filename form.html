@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>From Validation</title>
 	<meta charset="utf-8">
@@ -14,49 +14,59 @@
 			<h1 class="main-page__header">form validation</h1>
 		</div>
 		<div>
-			<h2 class="main-page__form-header"> Please fill up the form:</h2>
-			<fieldset>
-				<label class="main-page__lable">UserName:</label>
-				<input class="main-page__input" type="text" name="UserName" placeholder="Please enter your name" tabindex="1" />
-			</fieldset>
+			<h2 class="main-page__form-header"> Please fill the form:</h2>
+			<form action="#" method="post" onsubmit="return validateForm()">
+				<fieldset>
+					<label class="main-page__lable">UserName:</label>
+					<input id="username" class="main-page__input" type="text" name="username" placeholder="Please enter your name" onblur="isNotEmpty('username')" tabindex="1" />
+					<span id="username_error"></span>
+				</fieldset>
 
-			<fieldset>
-				<label class="main-page__lable">First name:</label>
-				<input class="main-page__input" type="text" name="firstName" placeholder="Please enter your first name" tabindex="2" />
-			</fieldset>
+				<fieldset>
+					<label class="main-page__lable">First name:</label>
+					<input id="firstName" class="main-page__input" type="text" name="firstName" placeholder="Please enter your first name" onblur="isNotEmpty('firstName')" tabindex="2" />
+					<span id="firstName_error"></span>
+				</fieldset>
 
-			<fieldset>
-				<label class="main-page__lable">Last name:</label>
-				<input class="main-page__input" type="text" name="lastName" placeholder="Please enter your last name" tabindex="3" />
-			</fieldset>
+				<fieldset>
+					<label class="main-page__lable">Last name:</label>
+					<input id="lastName" class="main-page__input" type="text" name="lastName" placeholder="Please enter your last name" onblur="isNotEmpty('lastName')" tabindex="3" />
+					<span id="lastName_error"></span>
+				</fieldset>
 
-			<fieldset>
-				<label class="main-page__lable">Email:</label>
-				<input class="main-page__input" type="text" name="Email" placeholder="Please enter your email address" tabindex="4" />
-			</fieldset>
+				<fieldset>
+					<label class="main-page__lable">Email:</label>
+					<input id="email" class="main-page__input" type="text" name="Email" placeholder="example@domain.com" onblur="checkEmail()" tabindex="4" />
+					<span id="email_error"></span>
+				</fieldset>
 
-			<fieldset>
-				<label class="main-page__lable">Website:</label>
-				<input class="main-page__input" type="text" name="Email" placeholder="Please enter your website url" tabindex="5" />
-			</fieldset>
+				<fieldset>
+					<label class="main-page__lable">Website:</label>
+					<input id="website" class="main-page__input" type="text" placeholder="Please enter your website url" onblur="checkurl()" tabindex="5" />
+					<span id="website_error"></span>
+				</fieldset>
 
-			<fieldset>
-				<label class="main-page__lable">Password:</label>
-				<input class="main-page__input" name="Password" type="Password" placeholder="Please enter your password" tabindex="6" />
-			</fieldset>
+				<fieldset>
+					<label class="main-page__lable">Password:</label>
+					<input id="password" class="main-page__input" name="password" type="Password" placeholder="Please enter your password" onblur="isNotEmpty('password')" tabindex="6" />
+					<span id="password_error"></span>
+				</fieldset>
 
-			<fieldset>
-				<label class="main-page__lable">Re password:</label>
-				<input class="main-page__input" name="Email" type="password" placeholder="Please re-write your password" tabindex="7" />
-			</fieldset>
+				<fieldset>
+					<label class="main-page__lable">Re password:</label>
+					<input id="re_password" class="main-page__input" name="re_password" type="password" placeholder="Please re-write your password" onblur="isPassMatch()" tabindex="7" />
+					<span id="re_password_error"></span>
+				</fieldset>
 
-			<fieldset>
-				<input class="main-page__check-box" name="Email" type="checkbox" tabindex="8" />
-				<span class="main-page__check-box-lable"> accpet terms and condition</span>
-			</fieldset>
-		</div>
-		<div>
-			<button class="main-page__btn-submit" type="submit">Submit</button>
+				<fieldset>
+					<input id="accpetTrems" class="main-page__check-box" type="checkbox" onchange="isChecked()" tabindex="8" />
+					<span class="main-page__check-box-lable"> accpet terms and condition</span>
+					<span id="accpetTrems_error"></span>
+				</fieldset>
+				<div>
+					<button class="main-page__btn-submit" type="submit" value="submit">Submit</button>
+				</div>
+			</form>
 		</div>
 	</div>
 	<!-- Javascript source script -->
