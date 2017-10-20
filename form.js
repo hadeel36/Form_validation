@@ -1,3 +1,4 @@
+"use strict";
 
 function isNotEmpty(controlName) {
     var inputControl = document.getElementById(controlName);
